@@ -1,10 +1,9 @@
-package Day2;
-
+package Day2Day3Day4;
 import java.util.Scanner;
 import java.lang.Math;
 
 
-public class LastDigit {
+public class Secondnumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -17,6 +16,13 @@ public class LastDigit {
     }
 
     static int last(int n) {
-        return Math.abs(n % 10);
+    	int sum;
+    	if(n>10) {
+    		return -1;
+    	}else {
+         sum= Math.abs(n % 100);
+         sum=sum/10;
+         return sum;
+    	}
     }
 }

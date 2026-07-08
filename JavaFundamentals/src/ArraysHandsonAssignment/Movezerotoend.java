@@ -2,7 +2,7 @@ package ArraysHandsonAssignment;
 
 import java.util.Scanner;
 
-public class Duplicateelement {
+public class Movezerotoend {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
@@ -10,17 +10,18 @@ public class Duplicateelement {
 		for(int i=0;i<n;i++) {
 			arr[i]=sc.nextInt();
 		}
+		int index=0;
 		for(int i=0;i<n;i++) {
-			boolean duplicate=false;
-			for(int j=0;j<i;j++) {
-				if(arr[i]==arr[j]) {
-					duplicate=true;
-					break;
-				}
+			if(arr[i]!=0) {
+				arr[index++]=arr[i];
 			}
-			if(!duplicate) {
-				System.out.println(arr[i]+"");
-			}
+		}
+		
+		while(index<n) {
+			arr[index++]=0;
+		}
+		for(int i=0;i<n;i++) {
+		System.out.println(arr[i]+" ");
 		}
 	}
 }

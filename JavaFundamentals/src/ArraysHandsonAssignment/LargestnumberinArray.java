@@ -2,7 +2,7 @@ package ArraysHandsonAssignment;
 
 import java.util.Scanner;
 
-public class Duplicateelement {
+public class LargestnumberinArray {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
@@ -10,17 +10,12 @@ public class Duplicateelement {
 		for(int i=0;i<n;i++) {
 			arr[i]=sc.nextInt();
 		}
+		int max=0;
 		for(int i=0;i<n;i++) {
-			boolean duplicate=false;
-			for(int j=0;j<i;j++) {
-				if(arr[i]==arr[j]) {
-					duplicate=true;
-					break;
-				}
-			}
-			if(!duplicate) {
-				System.out.println(arr[i]+"");
+			if(arr[i]>max) {
+				max=arr[i];
 			}
 		}
+		System.out.println(max);
 	}
 }

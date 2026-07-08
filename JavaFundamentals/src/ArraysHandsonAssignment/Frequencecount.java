@@ -2,25 +2,26 @@ package ArraysHandsonAssignment;
 
 import java.util.Scanner;
 
-public class Duplicateelement {
+public class Frequencecount {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
 		int[] arr=new int[n];
+		boolean[] visited=new boolean[n];
 		for(int i=0;i<n;i++) {
 			arr[i]=sc.nextInt();
 		}
 		for(int i=0;i<n;i++) {
-			boolean duplicate=false;
-			for(int j=0;j<i;j++) {
+			if(visited[i]) 
+				continue;
+			int count=1;
+			for(int j=i+1;j<n;j++) {
 				if(arr[i]==arr[j]) {
-					duplicate=true;
-					break;
+					count++;
+					visited[j]=true;
 				}
 			}
-			if(!duplicate) {
-				System.out.println(arr[i]+"");
-			}
+			System.out.println(arr[i]+"->"+count);
 		}
 	}
 }

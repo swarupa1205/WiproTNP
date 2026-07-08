@@ -1,15 +1,13 @@
-package Day2;
+package Day2Day3Day4;
 
 import java.util.Scanner;
 
-public class Evenorodd {
+public class TwoBackendNumber {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
-		if(n%2==0) {
-			System.out.println("Even");
-		}else {
-			System.out.println("Odd");
+		for(int i=n;i>=0;i-=2) {
+			System.out.println(i);
 		}
 	}
 }

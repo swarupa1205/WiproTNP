@@ -1,16 +1,17 @@
-package Day2;
+package Day2Day3Day4;
 
 import java.util.Scanner;
 
-public class Greaternumber {
+public class sumEvenorodd {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int a=sc.nextInt();
 		int b=sc.nextInt();
-		if(a<b) {
-			System.out.println(b+" is greater number");
+		int c=a+b;
+		if(c%2==0) {
+			System.out.println("Sum is even");
 		}else {
-			System.out.println(a+" is greater number");
+			System.out.println("Sum is odd");
 		}
 	}
 }
